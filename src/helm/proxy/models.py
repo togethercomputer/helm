@@ -369,6 +369,22 @@ ALL_MODELS = [
         # TODO(#1828): Upgrade to FULL_FUNCTIONALITY_TEXT_MODEL_TAG
         tags=[TEXT_MODEL_TAG, LIMITED_FUNCTIONALITY_TEXT_MODEL_TAG],
     ),
+    Model(
+        group="together",
+        name="meta/llama-2-7b-chat",
+        tags=[TEXT_MODEL_TAG, FULL_FUNCTIONALITY_TEXT_MODEL_TAG],
+    ),
+    Model(
+        group="together",
+        name="meta/llama-2-13b-chat",
+        tags=[TEXT_MODEL_TAG, FULL_FUNCTIONALITY_TEXT_MODEL_TAG],
+    ),
+    Model(
+        group="together",
+        name="meta/llama-2-70b-chat",
+        # TODO(#1828): Upgrade to FULL_FUNCTIONALITY_TEXT_MODEL_TAG
+        tags=[TEXT_MODEL_TAG, LIMITED_FUNCTIONALITY_TEXT_MODEL_TAG],
+    ),
     # Stanford
     Model(
         group="together",

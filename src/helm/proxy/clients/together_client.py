@@ -36,6 +36,9 @@ MODEL_ALIASES: Dict[str, str] = {
     "llama-2-7b": "togethercomputer/llama-2-7b",
     "llama-2-13b": "togethercomputer/llama-2-13b",
     "llama-2-70b": "togethercomputer/llama-2-70b",
+    "llama-2-7b-chat": "togethercomputer/llama-2-7b-chat",
+    "llama-2-13b-chat": "togethercomputer/llama-2-13b-chat",
+    "llama-2-70b-chat": "togethercomputer/llama-2-70b-chat",
     "mistral-7b-v0.1": "mistralai/Mistral-7B-v0.1",
     "mpt-7b": "togethercomputer/mpt-7b",
     "mpt-instruct-7b": "togethercomputer/mpt-7b-instruct",
@@ -162,6 +165,9 @@ class TogetherClient(CachingClient):
             "echo": request.echo_prompt,
             "top_p": request.top_p,
         }
+        if 'llama-2' in request.model_engine:
+            raw_request['prompt'] = '<s>' + raw_request['prompt']
+        
         return _rewrite_raw_request_for_model_tags(raw_request, request.model_engine)
 
     def __init__(self, tokenizer: Tokenizer, cache_config: CacheConfig, api_key: Optional[str] = None):
@@ -182,7 +188,8 @@ class TogetherClient(CachingClient):
         headers: Dict[str, str] = {"Authorization": f"Bearer {self.api_key}"}
 
         # TODO: Remove synchronous branch.
-        if request.model_engine in MODEL_ALIASES:
+        # Jue: Our new api does not support async call
+        if request.model_engine in MODEL_ALIASES and False:
 
             def submit_job() -> str:
                 submit_request = {**raw_request, "async": True}

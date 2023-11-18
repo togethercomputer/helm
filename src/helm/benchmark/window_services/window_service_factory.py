@@ -268,6 +268,9 @@ class WindowServiceFactory:
             "meta/llama-2-7b",
             "meta/llama-2-13b",
             "meta/llama-2-70b",
+            "meta/llama-2-7b-chat",
+            "meta/llama-2-13b-chat",
+            "meta/llama-2-70b-chat",
         ]:
             from helm.benchmark.window_services.llama_window_service import Llama2WindowService
 
