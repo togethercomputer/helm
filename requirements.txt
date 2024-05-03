@@ -163,7 +163,7 @@ torch==1.12.1 ; sys_platform == "darwin"
 torchvision==0.13.1 ; sys_platform == "darwin"
 torch==1.12.1+cu113 ; sys_platform == "linux"
 torchvision==0.13.1+cu113 ; sys_platform == "linux"
-tqdm==4.64.1
+tqdm==4.66.3
 transformers==4.33.1
 trio==0.22.0
 trio-websocket==0.9.2
