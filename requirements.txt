@@ -113,7 +113,7 @@ pyemd==0.5.1
 pyext==0.7
 pyflakes==2.5.0
 pyhocon==0.3.59
-pymongo==4.2.0
+pymongo==4.6.3
 pyparsing==2.4.7
 PySocks==1.7.1
 pytest==7.2.0
