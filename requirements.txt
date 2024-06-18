@@ -132,7 +132,7 @@ s3transfer==0.6.0
 sacrebleu==2.2.1
 sacremoses==0.0.53
 scaleapi==2.13.0
-scikit-learn==1.1.2
+scikit-learn==1.5.0
 scipy==1.10.0
 selenium==4.8.0
 sentencepiece==0.1.97
