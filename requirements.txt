@@ -188,7 +188,7 @@ wsproto==1.2.0
 xlrd==2.0.1
 xxhash==3.0.0
 yarl==1.8.1
-zipp==3.11.0
+zipp==3.19.1
 zope.event==4.5.0
 zope.interface==5.4.0
 zstandard==0.18.0
