@@ -28,7 +28,6 @@ from .metrics.metric_service import MetricService
 from .metrics.metric import Metric, MetricSpec, MetricResult, PerInstanceStats, create_metric, Stat
 from .window_services.tokenizer_service import TokenizerService
 
-
 LATEST_SYMLINK: str = "latest"
 
 

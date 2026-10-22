@@ -8,7 +8,6 @@ from helm.common.general import match_case
 from .perturbation_description import PerturbationDescription
 from .perturbation import TextPerturbation
 
-
 """ Gender term mappings """
 GENDER_TERM_MAPPINGS: List[Tuple[str, ...]] = [
     # List based on Garg et al. (2018)
@@ -214,7 +213,7 @@ class GenderPerturbation(TextPerturbation):
     def perturb(self, text: str, rng: Random) -> str:
         """Perform the perturbations on the provided text."""
         # Substitute the words
-        for (word, synonym) in self.word_synonym_pairs:
+        for word, synonym in self.word_synonym_pairs:
             text = self.substitute_word(text, word, synonym, rng)
 
         return text

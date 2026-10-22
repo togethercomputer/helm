@@ -26,8 +26,7 @@ def _format_template_tags(raw_text: str) -> str:
 
 def _render_template_crowd_html(task_template: CritiqueTaskTemplate) -> str:
     """Render the Crowd HTML for the template."""
-    validation_crowd_html = textwrap.dedent(
-        """\
+    validation_crowd_html = textwrap.dedent("""\
         <script>
             // Validates that an option is selected for each radio group
             // because Mechanical Turk Crowd HTML does not do so automatically.
@@ -54,8 +53,7 @@ def _render_template_crowd_html(task_template: CritiqueTaskTemplate) -> str:
                     }
                 }
             });
-        </script>"""
-    )
+        </script>""")
 
     instructions_crowd_html = (
         f'<p style="white-space: pre-wrap;">{_format_template_tags(task_template.instructions)}</p>'
@@ -64,8 +62,7 @@ def _render_template_crowd_html(task_template: CritiqueTaskTemplate) -> str:
     questions_crowd_html = "\n<hr>\n".join(
         [_render_question_crowd_html(question) for question in task_template.questions]
     )
-    return textwrap.dedent(
-        f"""\
+    return textwrap.dedent(f"""\
         <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
         {_indent_to_level(validation_crowd_html, 2)}
         <crowd-form answer-format="flatten-objects">
@@ -73,18 +70,15 @@ def _render_template_crowd_html(task_template: CritiqueTaskTemplate) -> str:
             {_indent_to_level(divider_html, 3)}
             {_indent_to_level(questions_crowd_html, 3)}
             {_indent_to_level(divider_html, 3)}
-        </crowd-form>"""
-    )
+        </crowd-form>""")
 
 
 def _render_question_crowd_html(question_template: CritiqueQuestionTemplate) -> str:
     """Render the Crowd HTML for a question."""
     question_input_crowd_html: str
     if question_template.question_type == QuestionType.FREE_RESPONSE:
-        question_input_crowd_html = textwrap.dedent(
-            f"""\
-            <crowd-text-area name="{question_template.name}" required></crowd-text-area>"""
-        )
+        question_input_crowd_html = textwrap.dedent(f"""\
+            <crowd-text-area name="{question_template.name}" required></crowd-text-area>""")
     elif question_template.question_type == QuestionType.MULTIPLE_CHOICE:
         question_input_crowd_html = _render_multiple_choice_options_crowd_html(
             question_template.name, question_template.options
@@ -93,13 +87,11 @@ def _render_question_crowd_html(question_template: CritiqueQuestionTemplate) -> 
         question_input_crowd_html = _render_checkbox_options_crowd_html(
             question_template.name, question_template.options
         )
-    return textwrap.dedent(
-        f"""\
+    return textwrap.dedent(f"""\
         <p style=\"white-space: pre-wrap;\">
             {_format_template_tags(question_template.text)}
         </p>
-        {_indent_to_level(question_input_crowd_html, 2)}"""
-    )
+        {_indent_to_level(question_input_crowd_html, 2)}""")
 
 
 def _render_multiple_choice_options_crowd_html(name: str, options: List[str]) -> str:
@@ -110,12 +102,10 @@ def _render_multiple_choice_options_crowd_html(name: str, options: List[str]) ->
             for index, option in enumerate(options)
         ]
     )
-    return textwrap.dedent(
-        f"""\
+    return textwrap.dedent(f"""\
         <crowd-radio-group>
             {_indent_to_level(buttons_crowd_html, 3)}
-        </crowd-radio-group>"""
-    )
+        </crowd-radio-group>""")
 
 
 def _render_checkbox_options_crowd_html(name: str, options: List[str]) -> str:

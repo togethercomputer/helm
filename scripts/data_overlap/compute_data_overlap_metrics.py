@@ -24,7 +24,6 @@ from common.arguments import get_data_overlap_args
 from common.util import get_tokenizer
 from scenarios.scenario import ScenarioSpec
 
-
 PART_INPUT: str = "input"
 PART_REF: str = "references"
 

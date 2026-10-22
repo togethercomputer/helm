@@ -8,7 +8,6 @@ from helm.benchmark.scenarios.numeracy_scenario import (
     distance_paraboloid,
 )
 
-
 TOL = 1e-5  # note: different from TOL in numeracy_scenario.distance_<...> used for checking if real or complex
 
 

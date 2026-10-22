@@ -8,7 +8,6 @@ from helm.common.hierarchical_logger import htrack, hlog
 from helm.proxy.models import MODEL_NAME_TO_MODEL
 from helm.benchmark.presentation.schema import Schema
 
-
 CONTAMINATION_YAML_PACKAGE: str = "helm.benchmark.static"
 CONTAMINATION_YAML_FILENAME: str = "contamination.yaml"
 

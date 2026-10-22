@@ -13,7 +13,6 @@ from helm.proxy.clients.auto_client import AutoClient
 from helm.proxy.models import ALL_MODELS
 from collections import defaultdict
 
-
 _BUILT_IN_TOKENIZER_CONFIGS = [
     TokenizerConfig(
         name="neurips/local",

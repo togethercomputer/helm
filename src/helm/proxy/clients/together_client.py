@@ -9,7 +9,6 @@ from helm.common.request import wrap_request_time, Request, RequestResult, Seque
 from helm.proxy.tokenizers.tokenizer import Tokenizer
 from .client import CachingClient, truncate_sequence, cleanup_str
 
-
 MODEL_ALIASES: Dict[str, str] = {
     # Legacy models
     "flan-t5-xxl": "flan-t5-xxl-hf",
@@ -165,9 +164,9 @@ class TogetherClient(CachingClient):
             "echo": request.echo_prompt,
             "top_p": request.top_p,
         }
-        if 'llama-2' in request.model_engine:
-            raw_request['prompt'] = '<s>' + raw_request['prompt']
-        
+        if "llama-2" in request.model_engine:
+            raw_request["prompt"] = "<s>" + raw_request["prompt"]
+
         return _rewrite_raw_request_for_model_tags(raw_request, request.model_engine)
 
     def __init__(self, tokenizer: Tokenizer, cache_config: CacheConfig, api_key: Optional[str] = None):

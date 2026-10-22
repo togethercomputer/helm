@@ -12,7 +12,6 @@ from helm.benchmark.scenarios.scenario import Input, Instance, Reference, Output
 from .perturbation_description import PerturbationDescription
 from .perturbation import Perturbation, TextPerturbation
 
-
 ############################################################
 
 

@@ -39,7 +39,6 @@ from .metric_name import MetricName
 from .metric_service import MetricService
 from .statistic import Stat
 
-
 try:
     nltk.data.find("tokenizers/punkt")
 except LookupError:

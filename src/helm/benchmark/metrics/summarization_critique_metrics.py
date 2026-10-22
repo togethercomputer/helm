@@ -8,7 +8,6 @@ from .metric_service import MetricService
 from .statistic import Stat
 from helm.common.critique_request import CritiqueTaskTemplate, CritiqueQuestionTemplate, CritiqueRequest, QuestionType
 
-
 _FAITHFULNESS_NAME = "faithfulness"
 _RELEVANCE_NAME = "relevance"
 _COHERENCE_NAME = "coherence"

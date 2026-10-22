@@ -1,6 +1,5 @@
 from urllib.parse import urljoin
 
-
 # From "https://docs.cohere.ai/versioning-reference",
 # "this version [2021-11-08] introduces multiple generations, meaning that the generations endpoint will
 # now accept a num_generations argument in the JSON and will always return an array of generations"

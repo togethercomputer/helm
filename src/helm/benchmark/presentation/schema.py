@@ -10,7 +10,6 @@ from helm.common.general import hlog
 from helm.benchmark.metrics.metric_name import MetricName
 from helm.benchmark.augmentations.perturbation_description import PERTURBATION_WORST
 
-
 SCHEMA_YAML_PACKAGE: str = "helm.benchmark.static"
 SCHEMA_YAML_FILENAME: str = "schema.yaml"
 
@@ -118,9 +117,11 @@ class MetricNameMatcher:
         return MetricNameMatcher(
             name=mako.template.Template(self.name).render(**environment),
             split=mako.template.Template(self.split).render(**environment),
-            perturbation_name=mako.template.Template(self.perturbation_name).render(**environment)
-            if self.perturbation_name is not None
-            else None,
+            perturbation_name=(
+                mako.template.Template(self.perturbation_name).render(**environment)
+                if self.perturbation_name is not None
+                else None
+            ),
         )
 
 

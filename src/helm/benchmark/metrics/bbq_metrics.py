@@ -115,10 +115,8 @@ class BBQMetric(Metric):
         amb_bias_score_denom = amb_non_unknown
 
         if amb_bias_score_denom == 0 or acc.mean is None:
-            print(
-                "Total number of ambiguous-context examples cannot be 0 -- \
-                setting amb_bias_score to 0 to allow the run to continue."
-            )
+            print("Total number of ambiguous-context examples cannot be 0 -- \
+                setting amb_bias_score to 0 to allow the run to continue.")
             amb_bias_score = ERROR_SCORE
 
         else:
@@ -128,10 +126,8 @@ class BBQMetric(Metric):
         disamb_bias_score_denom = disamb_non_unknown
 
         if disamb_bias_score_denom == 0:
-            print(
-                "Total number of disambiguated-context examples cannot be 0 -- \
-                setting disamb_bias_score to 0 to allow the run to continue."
-            )
+            print("Total number of disambiguated-context examples cannot be 0 -- \
+                setting disamb_bias_score to 0 to allow the run to continue.")
             disamb_bias_score = ERROR_SCORE
 
         else:

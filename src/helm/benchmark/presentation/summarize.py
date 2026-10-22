@@ -59,7 +59,6 @@ from helm.benchmark.presentation.contamination import (
 )
 from helm.benchmark.presentation.run_display import write_run_display_json
 
-
 OVERLAP_N_COUNT = 13
 
 
@@ -1209,9 +1208,9 @@ class Summarizer:
             for scenario_spec_instance_ids_json in scenario_spec_instance_ids_jsons:
                 scenario_spec_instance_ids_dict = json.loads(scenario_spec_instance_ids_json)
                 scenario_spec_instance_ids = cattrs.structure(scenario_spec_instance_ids_dict, ScenarioSpecInstanceIds)
-                self.scenario_spec_instance_id_dict[
-                    scenario_spec_instance_ids.scenario_spec
-                ] = scenario_spec_instance_ids.instance_ids
+                self.scenario_spec_instance_id_dict[scenario_spec_instance_ids.scenario_spec] = (
+                    scenario_spec_instance_ids.instance_ids
+                )
 
     def write_scenario_spec_instance_ids_json(self, file_path) -> None:
         for run in self.runs:

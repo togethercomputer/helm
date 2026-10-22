@@ -87,7 +87,7 @@ class htrack:
         self.spec: Optional[str] = spec
 
     def __call__(self, fn: Callable) -> Any:
-        def wrapper(*args, **kwargs):  # type:ignore
+        def wrapper(*args, **kwargs):  # type: ignore
             if len(args) > 0 and hasattr(args[0], fn.__name__):
                 parent = type(args[0]).__name__ + "."
             else:

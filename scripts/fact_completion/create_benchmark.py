@@ -6,6 +6,7 @@ This script samples triples to use and constructs sentences from templates.
 2. Get names of QIDs for each and construct sentences.
 
 """
+
 import argparse
 from collections import defaultdict
 import numpy as np

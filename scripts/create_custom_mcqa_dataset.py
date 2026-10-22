@@ -12,7 +12,6 @@ from typing import List
 import os
 from helm.common.codec import to_jsonl
 
-
 # Creates a custom MCQA dataset about Stanford University
 dataset: List[Instance] = [
     Instance(

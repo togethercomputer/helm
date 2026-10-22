@@ -350,7 +350,6 @@ class AutoClient(Client):
             from helm.proxy.tokenizers.yalm_tokenizer import YaLMTokenizer
 
             tokenizer = YaLMTokenizer(cache_config=cache_config)
-            
 
         if tokenizer is None:
             raise ValueError(f"Could not find tokenizer for model: {tokenizer_name}")

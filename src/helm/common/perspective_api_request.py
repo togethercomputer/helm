@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Dict
 
-
 DEFAULT_ATTRIBUTES = [
     "TOXICITY",
     "SEVERE_TOXICITY",

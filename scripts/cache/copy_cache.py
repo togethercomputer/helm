@@ -18,7 +18,6 @@ from helm.common.cache import _MongoKeyValueStore
 from helm.common.hierarchical_logger import hlog, htrack
 from typing import Optional
 
-
 _SQLITE_FILE_SUFFIX = ".sqlite"
 
 

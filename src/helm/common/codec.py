@@ -25,7 +25,6 @@ from helm.benchmark.augmentations.perturbation_description import PerturbationDe
 import cattrs
 from cattrs.gen import make_dict_structure_fn, make_dict_unstructure_fn
 
-
 T = TypeVar("T")
 StructureFn = Callable[[Dict[str, Any], Type[T]], T]  # dict -> dataclass
 UnstructureFn = Callable[[T], Dict[str, Any]]  # dataclass -> dict

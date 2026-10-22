@@ -11,7 +11,6 @@ from sqlitedict import SqliteDict
 from helm.common.authentication import Authentication
 from helm.common.general import hlog
 
-
 # TODO: Move this to a configuration file (`default_quotas.conf` alongside `accounts.jsonl`)
 #       https://github.com/stanford-crfm/benchmarking/issues/52
 # There is no limit if nothing is specified.

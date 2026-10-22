@@ -1,6 +1,5 @@
 from typing import Dict, List
 
-
 # Using the example from the Cohere documentation: https://docs.cohere.ai/tokenize-reference/#usage
 TEST_PROMPT: str = "tokenize me! :D"
 TOKENIZED_PROMPT: List[str] = ["token", "ize", " me", "!", " :", "D"]

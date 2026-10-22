@@ -410,10 +410,8 @@ class ICEScenario(Scenario):
             # therefore we can only assume data is already downloaded and extracted
             data_path: str = os.path.join("restricted", self.name, SUBSET_TO_DIRECTORY[subset])
             if not os.path.exists(data_path):
-                raise FileNotFoundError(
-                    f"Data does not exist at the required location. \
-                        Please extract the relevant subset into {data_path}."
-                )
+                raise FileNotFoundError(f"Data does not exist at the required location. \
+                        Please extract the relevant subset into {data_path}.")
 
             corpus_contents = os.listdir(data_path)
 

@@ -9,7 +9,6 @@ from helm.common.hierarchical_logger import htrack_block, hlog
 from .caching_tokenizer import CachingTokenizer
 from .tokenizer import cleanup_tokens
 
-
 # TODO: Delete this.
 _MODEL_NAME_ALIASES: Dict[str, str] = {
     "google/t5-11b": "t5-11b",
