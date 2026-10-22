@@ -13,15 +13,14 @@ from helm.benchmark.adaptation.request_state import RequestState
 from helm.benchmark.adaptation.adapter_spec import AdapterSpec
 from helm.common.hierarchical_logger import hlog
 from helm.common.general import ensure_file_downloaded
-from helm.common.optional_dependencies import handle_module_not_found_error
 from .metric import Metric, MetricResult
 from .metric_name import MetricName
 from .metric_service import MetricService
 from .basic_metrics import get_rouge_function
 from .statistic import Stat
 from .summac.model_summac import SummaCZS
+from .data_stats_metric import DataStatsMetric
 from bert_score import BERTScorer
-
 
 QAFACTEVAL_URL: str = (
     "https://storage.googleapis.com/crfm-helm-public/source_datasets/metrics/summarization_metrics/qafacteval.pk"
@@ -48,16 +47,9 @@ class SummarizationMetric(Metric):
             "rouge_2": get_rouge_function("rouge2"),
             "rouge_l": get_rouge_function("rougeL"),
         }
-        # Download en_core_web_sm before importing DataStatsMetric to
-        # avoid triggering a bug in DataStatsMetric that raises
-        # `NameError: name 'stderr' is not defined`
+        # Download en_core_web_sm before constructing DataStatsMetric, which loads it.
         if not spacy.util.is_package("en_core_web_sm"):
             spacy.cli.download("en_core_web_sm")
-
-        try:
-            from summ_eval.data_stats_metric import DataStatsMetric
-        except ModuleNotFoundError as e:
-            handle_module_not_found_error(e, ["metrics"])
 
         self.data_stats_metric = DataStatsMetric()
         self.task: str = task
