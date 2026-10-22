@@ -4,7 +4,6 @@ from copy import deepcopy
 from dataclasses import dataclass, field, replace
 from typing import List, Optional
 
-
 TEXT_TYPE = "text"
 
 

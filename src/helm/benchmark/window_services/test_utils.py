@@ -5,7 +5,6 @@ from helm.proxy.services.server_service import ServerService
 from helm.benchmark.metrics.metric_service import MetricService
 from .tokenizer_service import TokenizerService
 
-
 TEST_PROMPT: str = (
     "The Center for Research on Foundation Models (CRFM) is "
     "an interdisciplinary initiative born out of the Stanford "

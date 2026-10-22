@@ -98,9 +98,9 @@ TRUNCATED_REQUEST_RESULT: TokenizationRequestResult
 # TODO: Re-encode requests and results.
 # with open("src/helm/benchmark/window_services/mock_ai21_tokenizer_request_results.pkl", "rb") as f:
 #     REQUEST_RESULT, LONG_REQUEST_RESULT, TRUNCATED_REQUEST_RESULT = pickle.load(f)
-REQUEST_RESULT = None  # type:ignore
-LONG_REQUEST_RESULT = None  # type:ignore
-TRUNCATED_REQUEST_RESULT = None  # type:ignore
+REQUEST_RESULT = None  # type: ignore
+LONG_REQUEST_RESULT = None  # type: ignore
+TRUNCATED_REQUEST_RESULT = None  # type: ignore
 
 
 @unittest.skip("The requests and results cannot be unpicked after the modules moved")

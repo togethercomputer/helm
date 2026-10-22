@@ -14,7 +14,6 @@ from helm.common.cache import (
 from helm.common.hierarchical_logger import hlog, htrack
 from .export_requests import SUPPORTED_ORGS
 
-
 """
 Script to update cache with responses/request results.
 

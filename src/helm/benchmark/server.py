@@ -10,7 +10,6 @@ import urllib
 
 from bottle import Bottle, static_file
 
-
 app = Bottle()
 
 

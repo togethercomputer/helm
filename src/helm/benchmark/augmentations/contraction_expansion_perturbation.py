@@ -8,7 +8,6 @@ from helm.common.general import match_case
 from .perturbation import TextPerturbation
 from .perturbation_description import PerturbationDescription
 
-
 CONTRACTION_MAP: Dict[str, str] = {
     "ain't": "is not",
     "aren't": "are not",

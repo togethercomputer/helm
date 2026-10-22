@@ -20,7 +20,6 @@ from helm.common.hierarchical_logger import hlog
 from .scenario import Scenario, Instance, Reference, TRAIN_SPLIT, TEST_SPLIT, CORRECT_TAG, Input, Output
 from .code_scenario import CodeReference, CodeInstance
 
-
 CLEVA_DATA_URL = "http://39.108.215.175/data"
 CLEVA_DATA_PATH = "benchmark_output/scenarios/cleva"
 

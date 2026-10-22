@@ -10,7 +10,6 @@ from helm.proxy.clients.anthropic_client import AnthropicLegacyClient
 from helm.proxy.retry import get_retry_decorator
 from helm.proxy.tokenizers.huggingface_tokenizer import HuggingFaceTokenizer
 
-
 """
 Adds log probs for all entries in the Anthropic cache.
 

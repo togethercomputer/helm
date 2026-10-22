@@ -16,7 +16,6 @@ from dataclasses import asdict, is_dataclass
 from helm.common.hierarchical_logger import hlog, htrack, htrack_block
 from helm.common.optional_dependencies import handle_module_not_found_error
 
-
 _CREDENTIALS_FILE_NAME = "credentials.conf"
 _CREDENTIALS_ENV_NAME = "HELM_CREDENTIALS"
 

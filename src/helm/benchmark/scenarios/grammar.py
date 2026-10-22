@@ -8,7 +8,6 @@ import dacite
 import re
 import yaml
 
-
 ROOT_CATEGORY = "Root"
 
 

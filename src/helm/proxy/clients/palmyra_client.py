@@ -13,7 +13,6 @@ from helm.common.tokenization_request import (
 from helm.proxy.tokenizers.tokenizer import Tokenizer
 from .client import CachingClient, truncate_sequence
 
-
 _CONTENT_MODERATION_KEY = "fail.content.moderation.failed"
 
 

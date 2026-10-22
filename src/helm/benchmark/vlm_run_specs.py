@@ -7,7 +7,6 @@ from .run_specs import run_spec_function, get_exact_match_metric_specs
 from .runner import RunSpec
 from .scenarios.scenario import ScenarioSpec
 
-
 ############################################################
 # Prototypical adapter specs for VLM evaluation
 

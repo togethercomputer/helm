@@ -19,7 +19,6 @@ from helm.proxy.clients.google_client import GoogleClient
 from helm.proxy.clients.together_client import TogetherClient
 from helm.proxy.clients.microsoft_client import MicrosoftClient
 
-
 """
 Exports raw requests from a run suite to a jsonl file.
 

@@ -9,7 +9,6 @@ from helm.common.hierarchical_logger import hlog
 from helm.common.object_spec import ObjectSpec
 from helm.proxy.models import ALL_MODELS, FULL_FUNCTIONALITY_TEXT_MODEL_TAG, MODEL_NAME_TO_MODEL, TEXT_MODEL_TAG, Model
 
-
 MODEL_DEPLOYMENTS_FILE = "model_deployments.yaml"
 
 

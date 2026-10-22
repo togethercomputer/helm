@@ -154,8 +154,7 @@ def main(args):
             config[opt] = val
 
     if config["help"]:
-        help = (
-            """
+        help = """
         Usage: %s [options] filename(s)
         Options:
             -h, --help              Show this message
@@ -177,9 +176,7 @@ def main(args):
                                     (only has an effect on -a, default: 4)
             -e <s>, --encoding <s>  Open files with specified encoding
                                     (default: utf-8)
-        """
-            % args[0]
-        )
+        """ % args[0]
 
         # Also removes 8 leading spaces to remove our indentation
         print("\n".join([x[8:] for x in help[1:].split("\n")]))

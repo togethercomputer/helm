@@ -6,7 +6,6 @@ import numpy as np
 
 from helm.common.general import ensure_file_downloaded
 
-
 RandomState = Tuple[str, np.ndarray, int, int, float]
 
 

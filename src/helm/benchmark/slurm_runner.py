@@ -24,7 +24,6 @@ from helm.benchmark.slurm_jobs import (
 from helm.common.general import ensure_directory_exists
 from helm.common.hierarchical_logger import hlog, htrack_block
 
-
 _DEFAULT_MAX_CONCURRENT_WORKER_SLURM_JOBS = 8
 _MAX_CONCURRENT_WORKER_SLURM_JOBS_ENV_NAME = "HELM_MAX_CONCURRENT_WORKER_SLURM_JOBS"
 _SLURM_NODE_NAMES_ENV_NAME = "HELM_SLURM_NODE_NAMES"

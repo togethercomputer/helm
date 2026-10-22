@@ -8,7 +8,6 @@ import yaml
 
 from helm.proxy.models import ALL_MODELS, MODEL_NAME_TO_MODEL, Model
 
-
 MODEL_METADATA_FILE = "model_metadata.yaml"
 
 

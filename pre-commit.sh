@@ -3,10 +3,10 @@
 # This script fails when any of its commands fail.
 set -e
 
-# Check that python version is at least 3.8.
-valid_version=$(python3 -c 'import sys; print(sys.version_info[:2] >= (3, 8))')
+# Check that python version is at least 3.11.
+valid_version=$(python3 -c 'import sys; print(sys.version_info[:2] >= (3, 11))')
 if [ "$valid_version" == "False" ]; then
-  echo "Python 3 version (python3 --version) must be at least 3.8, but was:"
+  echo "Python 3 version (python3 --version) must be at least 3.11, but was:"
   echo "$(python3 --version 2>&1)"
   exit 1
 fi

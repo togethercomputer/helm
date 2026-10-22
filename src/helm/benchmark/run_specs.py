@@ -59,7 +59,6 @@ from helm.proxy.models import (
 )
 from helm.common.general import singleton
 
-
 ############################################################
 # Prototypical adapter specs
 

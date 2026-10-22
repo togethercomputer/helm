@@ -8,7 +8,6 @@ import yaml
 from helm.common.hierarchical_logger import hlog
 from helm.common.object_spec import ObjectSpec
 
-
 TOKENIEZR_CONFIGS_FILE = "tokenizer_configs.yaml"
 
 

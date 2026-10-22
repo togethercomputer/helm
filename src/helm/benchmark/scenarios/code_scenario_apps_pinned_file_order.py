@@ -4,7 +4,6 @@ from typing import Dict, List
 
 from helm.common.general import ensure_file_downloaded
 
-
 _APPS_PINNED_FILE_ORDER_URL: str = (
     "https://worksheets.codalab.org/rest/bundles/0x308e1062e2b7448bacc45b4c92af5a75/contents/blob/"
 )
