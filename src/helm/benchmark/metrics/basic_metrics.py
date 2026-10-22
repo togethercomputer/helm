@@ -40,9 +40,10 @@ from .metric_service import MetricService
 from .statistic import Stat
 
 try:
-    nltk.data.find("tokenizers/punkt")
+    # NLTK >= 3.9 loads word_tokenize models from punkt_tab instead of the pickled punkt.
+    nltk.data.find("tokenizers/punkt_tab")
 except LookupError:
-    nltk.download("punkt")  # Required for rouge
+    nltk.download("punkt_tab")  # Required for rouge and word_tokenize
 
 
 EFFICIENCY_DATA_PACKAGE: str = "helm.benchmark.efficiency_data"
